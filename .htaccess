@@ -1,0 +1,7 @@
+Options -Indexes
+
+RewriteEngine on
+
+ErrorDocument 404 /app/controller/error.php
+
+RewriteRule ^$                          index.php
