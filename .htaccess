@@ -2,6 +2,6 @@ Options -Indexes
 
 RewriteEngine on
 
-ErrorDocument 404 /app/controller/error.php
+ErrorDocument 404 /calcsdotcom/app/controller/error.php
 
-RewriteRule ^$                          index.php
+RewriteRule ^$ 					app/controller/siteController.php?action=home [QSA,L]
