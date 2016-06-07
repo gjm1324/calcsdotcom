@@ -4,4 +4,25 @@ RewriteEngine on
 
 ErrorDocument 404 /calcsdotcom/app/controller/error.php
 
+# Site Controls
 RewriteRule ^$ 					app/controller/siteController.php?action=home [QSA,L]
+RewriteRule ^signup				app/controller/siteController.php?action=signup [QSA,L]
+RewriteRule ^MyAccount			app/controller/siteController.php?action=myaccount [QSA,L]
+RewriteRule ^RecentlyUsed		app/controller/siteController.php?action=recentlyused [QSA,L]
+RewriteRule ^Favorites			app/controller/siteController.php?action=favorites [QSA,L]
+RewriteRule ^Browse				app/controller/siteController.php?action=browse [QSA,L]
+RewriteRule ^MyCalcs			app/controller/siteController.php?action=mycalcs [QSA,L]
+RewriteRule ^CalcFactory		app/controller/siteController.php?action=calcfactory [QSA,L]
+
+# User Controls
+RewriteRule ^user/signup/?$ 	app/controller/userController.php?action=signup [QSA,L]
+RewriteRule ^user/login/?$ 		app/controller/userController.php?action=login [QSA,L]
+RewriteRule ^user/logout/?$ 	app/controller/userController.php?action=logout [QSA,L]
+RewriteRule ^user/update/?$ 	app/controller/userController.php?action=update [QSA,L]
+
+# Calc Controls
+
+# API Controls
+RewriteRule ^api/([a-z]+)/?$ app/controller/apiController.php?action=$1 [QSA]
+RewriteRule ^api/([a-z]+)/([a-zA-Z0-9,]+)/?$ app/controller/apiController.php?action=$1&firstArg=$2 [QSA]
+RewriteRule ^api/([a-z]+)/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/?$ app/controller/apiController.php?action=$1&firstArg=$2&secondArg=$3 [QSA]

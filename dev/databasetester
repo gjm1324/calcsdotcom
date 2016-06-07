@@ -1,0 +1,3 @@
+// DATABASE PHP TESTER
+
+$db = Db::instance();

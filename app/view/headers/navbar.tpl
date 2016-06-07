@@ -2,43 +2,46 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Calcs.com</a>
-    </div>
-    <form class="navbar-form navbar-right" id="loginForm" hidden>
-      <div class="form-group">
-        <input class="form-control" type="Email" name="loginEmail" placeholder="Email">
-      </div>
-      <div class="form-group">
-        <input class="form-control" type="password" name="loginPassword" placeholder="Password">
-      </div>
-        <button type="submit" class="btn btn-default">Login</button>
-    </form>
-    <ul class="nav navbar-nav navbar-right" id="myAccountTab" hidden>
-      <li><a href="<?=BASE_URL?>/MyAccount">My Account</a></li>
-    </ul>
-  </div><!-- /.container-fluid -->
-</nav> 
-
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <a class="navbar-brand" href="<?=BASE_URL?>"><img src="<?=BASE_URL?>/public/images/logo.png" style = "height: 100%;float: left;">Calcs.com</a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1, #navbar-collapse-2" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
     </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+      <p class="navbar-text logged-in">Signed in as <?=$displayname?></p>
+      <form class="navbar-form navbar-right logged-out" id="loginForm" action="<?=BASE_URL?>/user/login" method="post" hidden>
+        <div class="form-group">
+          <input class="form-control" type="Email" name="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="password" name="password" placeholder="Password">
+        </div>
+          <button type="submit" class="btn btn-default">Login</button>
+          <button type="button" onclick="window.location.href='<?=BASE_URL?>/user/signup'" class="btn btn-default">Sign Up</button>
+      </form>
 
+      <ul class="nav navbar-nav navbar-right logged-in" id="myAccountTab" hidden>
+        <li><a href="<?=BASE_URL?>/MyAccount">My Account</a></li>
+        <li><a href="<?=BASE_URL?>/user/logout">Log Out</a></li>
+      </ul>
+    </div>
+  </div><!-- /.container-fluid 
+</nav> 
+
+<nav class="navbar navbar-default">-->
+  <div class="container-fluid second-navbar">
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse" id="navbar-collapse-2">
       <ul class="nav navbar-nav">
-        <li id="recentlyUsedTab" class="active">  <a href="<?=BASE_URL?>/RecentlyUsed"  >Recently Used<span class="sr-only">(current)</span></a></li>
-        <li id="favoritesTab" >                   <a href="<?=BASE_URL?>/Favorites"     >Favorites</a></li>
-        <li id="browseTab" >                      <a href="<?=BASE_URL?>/Browse"        >Browse</a></li>
-        <li id="myCalcsTab" >                     <a href="<?=BASE_URL?>/MyCalcs"       >My Calcs</a></li>
-        <li id="calcFactoryTab" >                 <a href="<?=BASE_URL?>/CalcFactory"   >Calc Factory</a></li>
+      <!-- class="active" will highlight the tab that you want selected -->
+        <li id="recentlyUsedTab"  class="logged-in">  <a href="<?=BASE_URL?>/RecentlyUsed"  >Recently Used</a></li>
+        <li id="favoritesTab"     class="logged-in">  <a href="<?=BASE_URL?>/Favorites"     >Favorites</a></li>
+        <li id="browseTab"        class="">           <a href="<?=BASE_URL?>/Browse"        >Browse</a></li>
+        <li id="myCalcsTab"       class="logged-in">  <a href="<?=BASE_URL?>/MyCalcs"       >My Calcs</a></li>
+        <li id="calcFactoryTab"   class="logged-in">  <a href="<?=BASE_URL?>/CalcFactory"   >Calc Factory</a></li>
 <!--        <li class="dropdown">
           <a href="#" class="dropdown-toggle" 
                       data-toggle="dropdown" 

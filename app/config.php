@@ -10,4 +10,4 @@ define('DB_HOST','127.0.0.1');
 define('DB_USER','root');
 define('DB_PASS','');
 define('DB_DATABASE','calcsdotcom');
-define('NAVBAR',SYSTEM_PATH . '/view/headers/navbar.tpl');
+define('DB_USER_TABLE','users');

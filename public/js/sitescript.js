@@ -1,6 +1,8 @@
 if(loggedIn){
-	$('#myAccountTab').show();
+	$('.logged-in').show();
+	$('.logged-out').hide();
 }
 else{
-	$('#loginForm').show();
+	$('.logged-out').show();
+	$('.logged-in').hide();
 }

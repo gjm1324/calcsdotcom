@@ -14,3 +14,6 @@
 
 <!-- Custom styles for this template -->
 <link href="<?= BASE_URL ?>/public/css/style.css" rel="stylesheet">
+
+<!--LOGO-->
+<link rel="icon" href="<?= BASE_URL ?>/public/images/logo.png">
