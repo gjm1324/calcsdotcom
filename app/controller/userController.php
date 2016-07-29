@@ -58,6 +58,6 @@ class SiteController {
         $user = new User($_POST);
         $user->save();
         $_SESSION['user']=$user;
-        header("Location:".BASE_URL."/myaccount");
+        header("Location:".BASE_URL."/myaccount?updated=success");
     }
 }

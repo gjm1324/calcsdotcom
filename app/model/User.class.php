@@ -60,10 +60,10 @@ class User extends DbObject {
             );
         $db = Db::instance();
         $result = $db->lookup($query);
-        if(!mysql_num_rows($result))
+        if(!mysqli_num_rows($result))
             return null;
 		else {
-            $row = mysql_fetch_assoc($result);
+            $row = mysqli_fetch_assoc($result);
             $obj = self::loadById($row['id']);
             return ($obj);
         }
@@ -79,10 +79,10 @@ class User extends DbObject {
             );
         $db = Db::instance();
         $result = $db->lookup($query);
-        if(!mysql_num_rows($result))
+        if(!mysqli_num_rows($result))
             return null;
 		else {
-            $row = mysql_fetch_assoc($result);
+            $row = mysqli_fetch_assoc($result);
             $obj = self::loadById($row['id']);
             return ($obj);
         }
