@@ -7,3 +7,7 @@
 	border-width: 1px 0px 0px 0px;
 	border-color: rgb(231,231,231);
 }
+
+.emptyForm {
+	border-color: red;
+}

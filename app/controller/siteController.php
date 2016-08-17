@@ -203,7 +203,7 @@ class SiteController {
         $head = SYSTEM_PATH . '/view/headers/head.tpl';
         if($this->loggedIn()){$displayname = $_SESSION['user']->get('displayname');}
         $foot = SYSTEM_PATH . '/view/headers/foot.tpl';
-        $content = SYSTEM_PATH . '/view/mainpages/myaccount.tpl';
+        $content = SYSTEM_PATH . '/view/mainpages/calcfactory.tpl';
         $user = User::JSONtoOBJECT(HttpRequest::toString(BASE_URL.'/api/user/'.$_SESSION['user']->getId()));
         $javascript = BASE_URL . '/public/js/sitescript.js';
         $stylesheet = BASE_URL . '/public/css/style.css';
